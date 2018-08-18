@@ -1,0 +1,562 @@
+Sender: LSF System <lsfadmin@eu-c7-027-06>
+Subject: Job 61440541: <python "./pipeline tryouts.py"> in cluster <euler> Done
+
+Job <python "./pipeline tryouts.py"> was submitted from host <eu-login-04> by user <naefl> in cluster <euler> at Sat Apr 14 21:27:04 2018.
+Job was executed on host(s) <8*eu-c7-027-06>, in queue <bigmem.4h>, as user <naefl> in cluster <euler> at Sat Apr 14 21:27:43 2018.
+</cluster/home/naefl> was used as the home directory.
+</cluster/home/naefl> was used as the working directory.
+Started at Sat Apr 14 21:27:43 2018.
+Terminated at Sat Apr 14 21:29:43 2018.
+Results reported at Sat Apr 14 21:29:43 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python "./pipeline tryouts.py"
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   841.89 sec.
+    Max Memory :                                 1023 MB
+    Average Memory :                             395.00 MB
+    Total Requested Memory :                     64000.00 MB
+    Delta Memory :                               62977.00 MB
+    Max Swap :                                   -
+    Max Processes :                              51
+    Max Threads :                                55
+    Run time :                                   148 sec.
+    Turnaround time :                            159 sec.
+
+The output (if any) follows:
+
+currently on logReg_clf and logReg_clf_bus
+________________________________________________logReg_clf__________________________________________________________________
+multi class 💃
+             precision    recall  f1-score   support
+
+          0       0.98      0.98      0.98      1126
+          1       0.97      1.00      0.98      4448
+          2       1.00      1.00      1.00      4287
+          3       0.91      0.78      0.84      1555
+          4       0.91      0.97      0.94      2950
+          5       0.94      0.89      0.92      2112
+
+avg / total       0.96      0.96      0.96     16478
+
+         bicycle   bus   car  train  tram  walking
+bicycle     1102     0    13      2     0        9
+bus            0  4435     0      1    10        2
+car            1     0  4280      0     0        6
+train          5   129     0   1213   135       73
+tram           2    19     0     50  2858       21
+walking       14     0     4     67   148     1879
+0.956851559655
+__________________________________________________________________________________________________________________
+_________________________________________logReg_clf_bus_________________________________________________________________________
+single class 🎉
+             precision    recall  f1-score   support
+
+          0       1.00      0.99      0.99     12030
+          1       0.97      1.00      0.98      4448
+
+avg / total       0.99      0.99      0.99     16478
+
+               other vehicle   bus
+other vehicle          11902   128
+bus                       11  4437
+0.991564510256
+__________________________________________________________________________________________________________________
+currently on svm_clf and svm_clf_bus
+________________________________________________svm_clf__________________________________________________________________
+multi class 💃
+             precision    recall  f1-score   support
+
+          0       0.95      0.94      0.95      1126
+          1       0.99      0.98      0.98      4448
+          2       0.98      0.99      0.99      4287
+          3       0.98      0.84      0.91      1555
+          4       0.93      0.99      0.96      2950
+          5       0.91      0.93      0.92      2112
+
+avg / total       0.96      0.96      0.96     16478
+
+         bicycle   bus   car  train  tram  walking
+bicycle     1061     0    16      0     0       49
+bus            0  4362     0     12     1       73
+car           13     0  4258      1     0       15
+train          8    40     0   1310   148       49
+tram           2    10     0      6  2920       12
+walking       28     0    51      9    58     1966
+0.963527127079
+__________________________________________________________________________________________________________________
+_________________________________________svm_clf_bus_________________________________________________________________________
+single class 🎉
+             precision    recall  f1-score   support
+
+          0       1.00      0.99      0.99     12030
+          1       0.98      0.99      0.99      4448
+
+avg / total       0.99      0.99      0.99     16478
+
+               other vehicle   bus
+other vehicle          11933    97
+bus                       27  4421
+0.992474814905
+__________________________________________________________________________________________________________________
+currently on xgb_clf and xgb_clf_bus
+________________________________________________xgb_clf__________________________________________________________________
+multi class 💃
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00      1126
+          1       1.00      0.98      0.99      4448
+          2       1.00      1.00      1.00      4287
+          3       0.85      0.91      0.88      1555
+          4       0.92      0.90      0.91      2950
+          5       0.93      0.95      0.94      2112
+
+avg / total       0.96      0.96      0.96     16478
+
+         bicycle   bus   car  train  tram  walking
+bicycle     1126     0     0      0     0        0
+bus            0  4350     0     98     0        0
+car            5     0  4282      0     0        0
+train          0     0     0   1421   134        0
+tram           0     0     0    144  2659      147
+walking        0     0     0      0    99     2013
+0.961949265688
+__________________________________________________________________________________________________________________
+_________________________________________xgb_clf_bus_________________________________________________________________________
+single class 🎉
+             precision    recall  f1-score   support
+
+          0       0.99      0.96      0.98     12030
+          1       0.90      0.98      0.94      4448
+
+avg / total       0.97      0.97      0.97     16478
+
+               other vehicle   bus
+other vehicle          11565   465
+bus                       98  4350
+0.965833232188
+__________________________________________________________________________________________________________________
+currently on dt_clf and dt_clf_bus
+________________________________________________dt_clf__________________________________________________________________
+multi class 💃
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00      1126
+          1       1.00      0.98      0.99      4448
+          2       1.00      1.00      1.00      4287
+          3       0.85      0.91      0.88      1555
+          4       0.92      0.90      0.91      2950
+          5       0.93      0.95      0.94      2112
+
+avg / total       0.96      0.96      0.96     16478
+
+         bicycle   bus   car  train  tram  walking
+bicycle     1126     0     0      0     0        0
+bus            0  4350     0     98     0        0
+car            5     0  4282      0     0        0
+train          0     0     0   1421   134        0
+tram           0     0     0    144  2659      147
+walking        0     0     0      0    99     2013
+0.961949265688
+__________________________________________________________________________________________________________________
+_________________________________________dt_clf_bus_________________________________________________________________________
+single class 🎉
+             precision    recall  f1-score   support
+
+          0       0.99      0.96      0.98     12030
+          1       0.90      0.98      0.94      4448
+
+avg / total       0.97      0.97      0.97     16478
+
+               other vehicle   bus
+other vehicle          11565   465
+bus                       98  4350
+0.965833232188
+__________________________________________________________________________________________________________________
+currently on adb_clf and adb_clf_bus
+________________________________________________adb_clf__________________________________________________________________
+multi class 💃
+             precision    recall  f1-score   support
+
+          0       0.00      0.00      0.00      1126
+          1       1.00      0.98      0.99      4448
+          2       1.00      1.00      1.00      4287
+          3       0.00      0.00      0.00      1555
+          4       0.38      1.00      0.55      2950
+          5       0.00      0.00      0.00      2112
+
+avg / total       0.60      0.70      0.62     16478
+
+         bicycle   bus   car  train  tram  walking
+bicycle        0     0     0      0  1126        0
+bus            0  4350     0      0    98        0
+car            0     0  4282      0     5        0
+train          0     0     0      0  1555        0
+tram           0     0     0      0  2950        0
+walking        0     0     0      0  2112        0
+0.70287656269
+__________________________________________________________________________________________________________________
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+_________________________________________adb_clf_bus_________________________________________________________________________
+single class 🎉
+             precision    recall  f1-score   support
+
+          0       0.99      0.96      0.98     12030
+          1       0.90      0.98      0.94      4448
+
+avg / total       0.97      0.97      0.97     16478
+
+               other vehicle   bus
+other vehicle          11565   465
+bus                       98  4350
+0.965833232188
+__________________________________________________________________________________________________________________
+currently on rf_clf and rf_clf_bus
+________________________________________________rf_clf__________________________________________________________________
+multi class 💃
+             precision    recall  f1-score   support
+
+          0       0.91      0.99      0.95      1126
+          1       0.98      1.00      0.99      4448
+          2       0.99      1.00      0.99      4287
+          3       0.98      0.85      0.91      1555
+          4       0.95      0.99      0.97      2950
+          5       0.98      0.92      0.95      2112
+
+avg / total       0.97      0.97      0.97     16478
+
+         bicycle   bus   car  train  tram  walking
+bicycle     1119     0     2      0     2        3
+bus            0  4447     0      0     0        1
+car            6     0  4281      0     0        0
+train         30    71     2   1318    98       36
+tram           1     2     2     15  2927        3
+walking       79     0    47      8    42     1936
+0.972690860541
+__________________________________________________________________________________________________________________
+_________________________________________rf_clf_bus_________________________________________________________________________
+single class 🎉
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00     12030
+          1       1.00      0.99      0.99      4448
+
+avg / total       1.00      1.00      1.00     16478
+
+               other vehicle   bus
+other vehicle          12008    22
+bus                       24  4424
+0.997208399078
+__________________________________________________________________________________________________________________
+currently on knn_clf and knn_clf_bus
+________________________________________________knn_clf__________________________________________________________________
+multi class 💃
+             precision    recall  f1-score   support
+
+          0       0.90      0.88      0.89      1126
+          1       0.94      0.93      0.93      4448
+          2       0.97      0.98      0.97      4287
+          3       0.95      0.82      0.88      1555
+          4       0.85      0.96      0.90      2950
+          5       0.92      0.84      0.88      2112
+
+avg / total       0.93      0.92      0.92     16478
+
+         bicycle   bus   car  train  tram  walking
+bicycle      988     6    69      9    19       35
+bus           17  4132     6     32   196       65
+car           25    22  4221      3     5       11
+train         21    68     6   1277   143       40
+tram           6    90     7      9  2829        9
+walking       42    78    64      9   140     1779
+0.924019905328
+__________________________________________________________________________________________________________________
+_________________________________________knn_clf_bus_________________________________________________________________________
+single class 🎉
+             precision    recall  f1-score   support
+
+          0       0.98      0.97      0.97     12030
+          1       0.91      0.95      0.93      4448
+
+avg / total       0.96      0.96      0.96     16478
+
+               other vehicle   bus
+other vehicle          11613   417
+bus                      238  4210
+0.960250030343
+__________________________________________________________________________________________________________________
+currently on mpl_clf and mpl_clf_bus
+________________________________________________mpl_clf__________________________________________________________________
+multi class 💃
+             precision    recall  f1-score   support
+
+          0       0.98      0.98      0.98      1126
+          1       0.98      1.00      0.99      4448
+          2       0.99      1.00      0.99      4287
+          3       0.99      0.88      0.93      1555
+          4       0.98      0.99      0.98      2950
+          5       0.97      0.97      0.97      2112
+
+avg / total       0.98      0.98      0.98     16478
+
+         bicycle   bus   car  train  tram  walking
+bicycle     1105     0     7      0     0       14
+bus            0  4435     0      6     6        1
+car            7     0  4277      0     1        2
+train          0    93     0   1371    46       45
+tram           0     2     0      7  2932        9
+walking       11     0    27      4    20     2050
+0.981308411215
+__________________________________________________________________________________________________________________
+_________________________________________mpl_clf_bus_________________________________________________________________________
+single class 🎉
+             precision    recall  f1-score   support
+
+          0       1.00      0.99      0.99     12030
+          1       0.98      1.00      0.99      4448
+
+avg / total       0.99      0.99      0.99     16478
+
+               other vehicle   bus
+other vehicle          11922   108
+bus                       19  4429
+0.992292753975
+__________________________________________________________________________________________________________________
+currently on qda_clf and qda_clf_bus
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+________________________________________________qda_clf__________________________________________________________________
+multi class 💃
+             precision    recall  f1-score   support
+
+          0       0.94      1.00      0.97      1126
+          1       0.92      0.97      0.94      4448
+          2       0.98      0.98      0.98      4287
+          3       0.97      0.76      0.85      1555
+          4       0.87      0.96      0.92      2950
+          5       0.94      0.82      0.88      2112
+
+avg / total       0.94      0.93      0.93     16478
+
+         bicycle   bus   car  train  tram  walking
+bicycle     1121     0     2      0     0        3
+bus            0  4314     0     11    79       44
+car           65     0  4216      0     0        6
+train          0   105     1   1176   231       42
+tram           0    90     0     10  2837       13
+walking        9   183    80     10   101     1729
+0.934154630416
+__________________________________________________________________________________________________________________
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:682: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+_________________________________________qda_clf_bus_________________________________________________________________________
+single class 🎉
+             precision    recall  f1-score   support
+
+          0       0.98      0.75      0.85     12030
+          1       0.59      0.96      0.73      4448
+
+avg / total       0.87      0.81      0.82     16478
+
+               other vehicle   bus
+other vehicle           9009  3021
+bus                      172  4276
+0.806226483797
+__________________________________________________________________________________________________________________
+currently on lda_clf and lda_clf_bus
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:442: UserWarning: The priors do not sum to 1. Renormalizing
+  UserWarning)
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:442: UserWarning: The priors do not sum to 1. Renormalizing
+  UserWarning)
+/cluster/apps/python/3.6.1/x86_64/lib64/python3.6/site-packages/sklearn/discriminant_analysis.py:442: UserWarning: The priors do not sum to 1. Renormalizing
+  UserWarning)
+________________________________________________lda_clf__________________________________________________________________
+multi class 💃
+             precision    recall  f1-score   support
+
+          0       0.97      0.95      0.96      1126
+          1       0.97      1.00      0.99      4448
+          2       0.99      1.00      1.00      4287
+          3       0.99      0.72      0.83      1555
+          4       0.79      1.00      0.88      2950
+          5       0.98      0.75      0.85      2112
+
+avg / total       0.95      0.94      0.94     16478
+
+         bicycle   bus   car  train  tram  walking
+bicycle     1068     0    33      0     0       25
+bus            0  4446     0      1     1        0
+car            2     0  4281      0     0        4
+train          0   125     0   1125   300        5
+tram           0     0     0      6  2943        1
+walking       32     0     4      8   480     1588
+0.937674475058
+__________________________________________________________________________________________________________________
+_________________________________________lda_clf_bus_________________________________________________________________________
+single class 🎉
+             precision    recall  f1-score   support
+
+          0       1.00      0.81      0.90     12030
+          1       0.66      0.99      0.79      4448
+
+avg / total       0.91      0.86      0.87     16478
+
+               other vehicle   bus
+other vehicle           9778  2252
+bus                       35  4413
+0.861208884573
+__________________________________________________________________________________________________________________
+currently on gb_clf and gb_clf_bus
+________________________________________________gb_clf__________________________________________________________________
+multi class 💃
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00      1126
+          1       0.97      0.98      0.97      4448
+          2       1.00      1.00      1.00      4287
+          3       0.85      0.91      0.88      1555
+          4       0.92      0.90      0.91      2950
+          5       0.99      0.95      0.97      2112
+
+avg / total       0.96      0.96      0.96     16478
+
+         bicycle   bus   car  train  tram  walking
+bicycle     1126     0     0      0     0        0
+bus            0  4350     0     98     0        0
+car            5     0  4282      0     0        0
+train          0     0     0   1421   134        0
+tram           0   130     0    144  2659       17
+walking        0     0     0      0    99     2013
+0.961949265688
+__________________________________________________________________________________________________________________
+_________________________________________gb_clf_bus_________________________________________________________________________
+single class 🎉
+             precision    recall  f1-score   support
+
+          0       0.99      0.96      0.98     12030
+          1       0.90      0.98      0.94      4448
+
+avg / total       0.97      0.97      0.97     16478
+
+               other vehicle   bus
+other vehicle          11565   465
+bus                       98  4350
+0.965833232188
+__________________________________________________________________________________________________________________
+currently on lsvm_clf and lsvm_clf_bus
+________________________________________________lsvm_clf__________________________________________________________________
+multi class 💃
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99      1126
+          1       0.98      1.00      0.99      4448
+          2       1.00      1.00      1.00      4287
+          3       0.88      0.81      0.84      1555
+          4       0.91      0.96      0.94      2950
+          5       0.94      0.90      0.92      2112
+
+avg / total       0.96      0.96      0.96     16478
+
+         bicycle   bus   car  train  tram  walking
+bicycle     1112     0     7      0     0        7
+bus            0  4433     0      1    11        3
+car            0     0  4280      0     0        7
+train          4    84     0   1253   129       85
+tram           0     3     0     92  2834       21
+walking        5     0     5     71   128     1903
+0.959764534531
+__________________________________________________________________________________________________________________
+_________________________________________lsvm_clf_bus_________________________________________________________________________
+single class 🎉
+             precision    recall  f1-score   support
+
+          0       1.00      0.99      1.00     12030
+          1       0.98      1.00      0.99      4448
+
+avg / total       0.99      0.99      0.99     16478
+
+               other vehicle   bus
+other vehicle          11940    90
+bus                        9  4439
+0.993991989319
+__________________________________________________________________________________________________________________
+currently on gNB_clf and gNB_clf_bus
+________________________________________________gNB_clf__________________________________________________________________
+multi class 💃
+             precision    recall  f1-score   support
+
+          0       0.87      0.81      0.84      1126
+          1       0.96      0.93      0.94      4448
+          2       0.93      0.98      0.96      4287
+          3       0.91      0.73      0.81      1555
+          4       0.83      0.96      0.89      2950
+          5       0.93      0.85      0.89      2112
+
+avg / total       0.91      0.91      0.91     16478
+
+         bicycle   bus   car  train  tram  walking
+bicycle      908     0   181      0     6       31
+bus            0  4127     0     62   223       36
+car           72     0  4207      0     0        8
+train          1    84     0   1142   283       45
+tram           0    59     0     41  2835       15
+walking       62    34   116     12    83     1805
+0.91176113606
+__________________________________________________________________________________________________________________
+_________________________________________gNB_clf_bus_________________________________________________________________________
+single class 🎉
+             precision    recall  f1-score   support
+
+          0       0.98      0.81      0.89     12030
+          1       0.65      0.95      0.77      4448
+
+avg / total       0.89      0.85      0.86     16478
+
+               other vehicle   bus
+other vehicle           9777  2253
+bus                      217  4231
+0.85010316786
+__________________________________________________________________________________________________________________

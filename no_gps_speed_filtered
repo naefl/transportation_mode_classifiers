@@ -1,0 +1,36 @@
+ <lsfadmin@eu-c7-006-06>
+Subject: Job 61439643: <1 -W 4:00 -R rusage[mem=8192] python "./pipeline tryouts.py"> in cluster <euler> Exited
+
+Job <1 -W 4:00 -R rusage[mem=8192] python "./pipeline tryouts.py"> was submitted from host <eu-login-03> by user <naefl> in cluster <euler> at Sat Apr 14 21:14:33 2018.
+Job was executed on host(s) <8*eu-c7-006-06>, in queue <normal.4h>, as user <naefl> in cluster <euler> at Sat Apr 14 21:15:21 2018.
+</cluster/home/naefl> was used as the home directory.
+</cluster/home/naefl> was used as the working directory.
+Started at Sat Apr 14 21:15:21 2018.
+Terminated at Sat Apr 14 21:15:23 2018.
+Results reported at Sat Apr 14 21:15:23 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+1 -W 4:00 -R rusage[mem=8192] python "./pipeline tryouts.py"
+------------------------------------------------------------
+
+Exited with exit code 127.
+
+Resource usage summary:
+
+    CPU time :                                   0.06 sec.
+    Max Memory :                                 2 MB
+    Average Memory :                             2.00 MB
+    Total Requested Memory :                     8192.00 MB
+    Delta Memory :                               8190.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   21 sec.
+    Turnaround time :                            50 sec.
+
+The output (if any) follows:
+
+/cluster/shadow/.lsbatch/1523733273.61439643: line 8: 1: command not found

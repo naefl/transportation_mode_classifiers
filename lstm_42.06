@@ -1,0 +1,251 @@
+Sender: LSF System <lsfadmin@eu-c7-027-05>
+Subject: Job 65184746: <python lstm_raw_short.py> in cluster <euler> Done
+
+Job <python lstm_raw_short.py> was submitted from host <eu-login-06> by user <naefl> in cluster <euler> at Sun Jun  3 17:34:00 2018.
+Job was executed on host(s) <8*eu-c7-027-05>, in queue <bigmem.4h>, as user <naefl> in cluster <euler> at Mon Jun  4 06:14:17 2018.
+</cluster/home/naefl> was used as the home directory.
+</cluster/home/naefl> was used as the working directory.
+Started at Mon Jun  4 06:14:17 2018.
+Terminated at Mon Jun  4 07:47:51 2018.
+Results reported at Mon Jun  4 07:47:51 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python lstm_raw_short.py
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   55893.70 sec.
+    Max Memory :                                 3988 MB
+    Average Memory :                             3037.51 MB
+    Total Requested Memory :                     132000.00 MB
+    Delta Memory :                               128012.00 MB
+    Max Swap :                                   1 MB
+    Max Processes :                              3
+    Max Threads :                                39
+    Run time :                                   5625 sec.
+    Turnaround time :                            51231 sec.
+
+The output (if any) follows:
+
+2018-06-04 06:15:40.848712: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-06-04 06:15:40.849025: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-06-04 06:15:40.849053: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+True
+XAVIER_INIT
+50
+N_TIME_STEPS 
+64
+N_HIDDEN_UNITS 
+600
+LEN_TRAIN_SET_SHUFFLE 
+False
+TTRUNCATED_NORMAL_INITR
+3
+N_LAYERS 
+0.0005
+LEARNING_RATE 
+70
+N_EPOCHS 
+False
+GRU_INSTEAD_OF_LSTM 
+1
+FRAC_TRAIN
+10
+step
+50
+N_TIME_STEPS 
+64
+N_HIDDEN_UNITS 
+600
+LEN_TRAIN_SET_SHUFFLE 
+3
+N_LAYERS 
+0.0005
+LEARNING_RATE 
+70
+N_EPOCHS 
+False
+GRU_INSTEAD_OF_LSTM 
+10
+step
+1024
+BBATCH_SIZEA
+df.head after loading
+   accel_x  accel_y  accel_y.1   gyro_x   gyro_y   gyro_z        db  azimuth  \
+0  1.44955 -0.43295    9.31923  0.02447 -0.07287  0.00505  44.45433      118   
+
+   accuracy  speed  satellites in view  satellites in use label  
+0        18   6.87                  24                 13   bus  
+df shape after loading
+(624552, 13)
+X Shape,describe  after loading
+(624552, 12)
+(624552,)
+Labels shape after loading
+count     624552
+unique         6
+top          bus
+freq      157619
+dtype: object
+X Shape,describe  after X = data.iloc[:,-1]
+(624552, 12)
+                 0             1             2             3             4   \
+count  6.245520e+05  6.245520e+05  6.245520e+05  6.245520e+05  6.245520e+05   
+mean   4.314097e-17  3.749806e-17 -5.096824e-17  6.189000e-17  2.015976e-17   
+std    1.000001e+00  1.000001e+00  1.000001e+00  1.000001e+00  1.000001e+00   
+min   -9.058446e+00 -9.732413e+00 -6.690052e+00 -1.863100e+01 -3.995173e+01   
+25%   -3.689530e-01 -1.762180e-01 -7.901561e-01 -7.734345e-02 -7.528788e-02   
+50%    7.740546e-02  1.633145e-01  6.341903e-01 -5.325413e-02 -4.182746e-02   
+75%    4.825761e-01  3.660598e-01  7.583922e-01 -2.186048e-02  1.910284e-03   
+max    8.939428e+00  6.942678e+00  5.275700e+00  3.189646e+01  7.548210e+01   
+
+                 5             6             7             8             9   \
+count  6.245520e+05  6.245520e+05  6.245520e+05  6.245520e+05  6.245520e+05   
+mean  -1.201394e-17  6.203563e-16 -4.077459e-17  3.058094e-17  2.180712e-16   
+std    1.000001e+00  1.000001e+00  1.000001e+00  1.000001e+00  1.000001e+00   
+min   -4.434860e+01 -4.384210e+00 -1.545580e+00 -3.881979e-01 -7.251092e-01   
+25%   -3.727626e-02 -6.587677e-01 -9.996664e-01 -3.759339e-01 -7.251092e-01   
+50%    4.287995e-02  2.108870e-03 -4.694701e-03 -3.514061e-01 -4.809645e-01   
+75%    8.497444e-02  6.533214e-01  9.110314e-01 -3.064384e-01  5.524277e-01   
+max    2.961257e+01  3.484075e+00  1.624241e+00  1.738631e+01  4.778127e+00   
+
+                 10            11  
+count  6.245520e+05  6.245520e+05  
+mean   1.638265e-16 -1.572734e-16  
+std    1.000001e+00  1.000001e+00  
+min   -1.660706e+00 -1.348900e+00  
+25%   -5.082032e-01 -1.348900e+00  
+50%    4.522156e-01  2.673246e-01  
+75%    7.403413e-01  8.060660e-01  
+max    1.220551e+00  1.883549e+00  
+df_scaled Shape, describe  after X = data.iloc[:,-1]
+(624552, 13)
+                   0             1              2              3   \
+count   624552.000000  624552.00000  624552.000000  624552.000000   
+unique   33465.000000   30784.00000   31821.000000   66692.000000   
+top          0.561806       0.36606       0.794891      -0.065962   
+freq     22076.000000   22102.00000   22124.000000   22160.000000   
+
+                   4              5              6              7   \
+count   624552.000000  624552.000000  624552.000000  624552.000000   
+unique   69509.000000   60431.000000   13123.000000     361.000000   
+top         -0.038594       0.048795      -1.234999       1.034302   
+freq     22188.000000   22394.000000     925.000000   22785.000000   
+
+                   8              9              10           11      12  
+count   624552.000000  624552.000000  624552.000000  624552.0000  624552  
+unique     326.000000    1929.000000      24.000000      25.0000       6  
+top         -0.388198      -0.725109      -1.660706      -1.3489     bus  
+freq     81396.000000  249639.000000   80484.000000  172112.0000  157619  
+shuffled_df_with_min_length_seq shape
+(624552, 13)
+done with df
+df_scaled_train shape
+(499641, 13)
+df_scaled_test shape
+(124910, 13)
+df_scaled_train shape after shuffle
+(499641, 13)
+Labels train after train shuffling
+count     499641
+unique         6
+top          car
+freq      115265
+Name: label, dtype: object
+reshaped_segments_train/ x_train shape
+(49960, 50, 12)
+labels train after breakdown into seq_len
+49960,7,1
+{'bicycle', 'train', 'tram', 'car', 'walking', 'bus'}
+count     49960
+unique        6
+top         car
+freq      11535
+dtype: object
+labels_train_dummy/ y_train shape
+(49960, 6)
+reshaped_segments_test/x_test shape
+(12486, 50, 12)
+labels_test_dummy/y_test shape
+(12486, 6)
+X_train shape after nan checking
+(49960, 50, 12)
+X_test shape after nan checking
+(12486, 50, 12)
+epoch: 1 test accuracy: 0.5273906588554382 loss: 2.5783309936523438
+epoch: 2 test accuracy: 0.6685888171195984 loss: 2.2599005699157715
+epoch: 3 test accuracy: 0.7289764285087585 loss: 2.0197982788085938
+epoch: 4 test accuracy: 0.7698221802711487 loss: 1.9013233184814453
+epoch: 5 test accuracy: 0.8350152373313904 loss: 1.7653948068618774
+epoch: 6 test accuracy: 0.8798654675483704 loss: 1.6311941146850586
+epoch: 7 test accuracy: 0.8970046639442444 loss: 1.5648839473724365
+epoch: 8 test accuracy: 0.9006887674331665 loss: 1.5342929363250732
+epoch: 9 test accuracy: 0.9118212461471558 loss: 1.4911527633666992
+epoch: 10 test accuracy: 0.9153451919555664 loss: 1.451904058456421
+epoch: 11 test accuracy: 0.9175876975059509 loss: 1.4222657680511475
+epoch: 12 test accuracy: 0.920871376991272 loss: 1.3955100774765015
+epoch: 13 test accuracy: 0.9199903607368469 loss: 1.377362847328186
+epoch: 14 test accuracy: 0.9187890291213989 loss: 1.35964035987854
+epoch: 15 test accuracy: 0.9189492464065552 loss: 1.3459690809249878
+epoch: 16 test accuracy: 0.919670045375824 loss: 1.3322068452835083
+epoch: 17 test accuracy: 0.9183084964752197 loss: 1.317574143409729
+epoch: 18 test accuracy: 0.919670045375824 loss: 1.3028639554977417
+epoch: 19 test accuracy: 0.9197500944137573 loss: 1.2926454544067383
+epoch: 20 test accuracy: 0.9231939911842346 loss: 1.2715870141983032
+epoch: 21 test accuracy: 0.9262374043464661 loss: 1.258523941040039
+epoch: 22 test accuracy: 0.9276790022850037 loss: 1.2394989728927612
+epoch: 23 test accuracy: 0.9329649209976196 loss: 1.214933156967163
+epoch: 24 test accuracy: 0.9355278015136719 loss: 1.2065198421478271
+epoch: 25 test accuracy: 0.9207912683486938 loss: 1.233846664428711
+epoch: 26 test accuracy: 0.9235944151878357 loss: 1.187685489654541
+epoch: 27 test accuracy: 0.9304821491241455 loss: 1.1566798686981201
+epoch: 28 test accuracy: 0.9311228394508362 loss: 1.1445794105529785
+epoch: 29 test accuracy: 0.933925986289978 loss: 1.1266456842422485
+epoch: 30 test accuracy: 0.9364087581634521 loss: 1.110718011856079
+epoch: 31 test accuracy: 0.9373698830604553 loss: 1.095290184020996
+epoch: 32 test accuracy: 0.9349671602249146 loss: 1.089800238609314
+epoch: 33 test accuracy: 0.9288002848625183 loss: 1.094124674797058
+epoch: 34 test accuracy: 0.9276790022850037 loss: 1.0896943807601929
+epoch: 35 test accuracy: 0.9301617741584778 loss: 1.075445294380188
+epoch: 36 test accuracy: 0.9320038557052612 loss: 1.059653639793396
+epoch: 37 test accuracy: 0.934726893901825 loss: 1.043122410774231
+epoch: 38 test accuracy: 0.9356879591941833 loss: 1.0287806987762451
+epoch: 39 test accuracy: 0.9378504157066345 loss: 1.021340250968933
+epoch: 40 test accuracy: 0.9348870515823364 loss: 1.0129709243774414
+epoch: 41 test accuracy: 0.935928225517273 loss: 1.0037493705749512
+epoch: 42 test accuracy: 0.9364087581634521 loss: 0.9952443242073059
+epoch: 43 test accuracy: 0.9336056113243103 loss: 0.9880634546279907
+epoch: 44 test accuracy: 0.9320038557052612 loss: 0.9849600791931152
+epoch: 45 test accuracy: 0.9324042797088623 loss: 0.9830231070518494
+epoch: 46 test accuracy: 0.9289604425430298 loss: 0.9862194061279297
+epoch: 47 test accuracy: 0.932324230670929 loss: 0.9698137640953064
+epoch: 48 test accuracy: 0.9418548941612244 loss: 0.9348703622817993
+epoch: 49 test accuracy: 0.9395322799682617 loss: 0.9301891326904297
+epoch: 50 test accuracy: 0.9367291331291199 loss: 0.9294978380203247
+epoch: 51 test accuracy: 0.9317635893821716 loss: 0.9330747127532959
+epoch: 52 test accuracy: 0.9295210838317871 loss: 0.9266518354415894
+epoch: 53 test accuracy: 0.9251962304115295 loss: 0.9268758296966553
+epoch: 54 test accuracy: 0.9255966544151306 loss: 0.9295714497566223
+epoch: 55 test accuracy: 0.9277591109275818 loss: 0.9211845397949219
+epoch: 56 test accuracy: 0.9376101493835449 loss: 0.8940784931182861
+epoch: 57 test accuracy: 0.933925986289978 loss: 0.893639862537384
+epoch: 58 test accuracy: 0.9329649209976196 loss: 0.8840850591659546
+epoch: 59 test accuracy: 0.9321640133857727 loss: 0.8763660192489624
+epoch: 60 test accuracy: 0.935928225517273 loss: 0.859660267829895
+epoch: 61 test accuracy: 0.9385712146759033 loss: 0.842056930065155
+epoch: 62 test accuracy: 0.9383309483528137 loss: 0.8373478055000305
+epoch: 63 test accuracy: 0.9385712146759033 loss: 0.8325940370559692
+epoch: 64 test accuracy: 0.9416146278381348 loss: 0.8169968128204346
+epoch: 65 test accuracy: 0.9429761171340942 loss: 0.8105543851852417
+epoch: 66 test accuracy: 0.9396924376487732 loss: 0.8172953724861145
+epoch: 67 test accuracy: 0.9392920136451721 loss: 0.8174899220466614
+epoch: 68 test accuracy: 0.9393721222877502 loss: 0.805469274520874
+epoch: 69 test accuracy: 0.9401729702949524 loss: 0.7931307554244995
+epoch: 70 test accuracy: 0.9388915300369263 loss: 0.784989595413208
+final results: accuracy: 0.9388915300369263 loss: 0.784989595413208
